@@ -1,0 +1,59 @@
+unit uAvaliacao;
+
+interface
+
+type
+  TAvaliacao = class(TObject)
+    private
+    { private declarations }
+
+    FIdade: Integer;
+    FPeso: Double;
+    FAltura: Double;
+
+    //getters
+    function GetIdade: Integer;
+    function GetPeso: Double;
+    function GetAltura: Double;
+
+    //setters
+    procedure SetIdade(const Value: Integer);
+    procedure SetPeso(const Value: Double);
+    procedure SetAltura(const Value: Double);
+    protected
+     { protected declarations }
+    public
+     { public declarations }
+    // encapsulamento
+     property Idade: Integer read GetIdade write SetIdade;
+     property Peso: Double read GetPeso write SetPeso;
+     property Altura: Double read GetAltura write SetAltura;
+     // metodos
+     function CalculaIMC(pAltura, pPeso: Double):Double;
+     function ClassificacaoIMC(pIMC: Double; pIdade: integer): string;
+     function RetornaClassificacaoIMC(pIMC: Double; pIdade: Integer): string;
+   published
+    { published declarations }
+  end;
+
+implementation
+
+//Método utilizado para o teste do caminho básico
+function TAvaliacao.RetornaClassificacaoIMC(pIMC: Double; pIdade: Integer): string;
+begin
+    if(pIdade < 18) then
+      Result:= 'Não calculado'
+     else if((pIdade >=18) and (pIdade < 60)) then
+     begin
+       if pIMC < 18.5 then
+          Result := 'Abaixo do Peso'
+       else if(pIMC >=18.5) and (pIMC < 25) then
+          Result:= 'Peso normal'
+       else if(pIMC >= 25) and (pIMC < 30) then
+          Result:= 'Sobrepeso'
+       else if(pIMC >=30) and (pIMC < 35) then
+          Result:= 'Obesidade I'
+     end;
+end;
+
+end.

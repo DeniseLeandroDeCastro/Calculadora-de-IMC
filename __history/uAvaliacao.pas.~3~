@@ -1,0 +1,35 @@
+unit uAvaliacao;
+
+interface
+
+uses
+  System.SysUtils;
+
+Type
+  TAvaliacao = class(TObject)
+    private
+
+      Peso: Double;
+    Altura: Double;
+      Sexo: string;
+       IMC: string;
+
+    //getters:
+    function GetPeso: Double;
+    function GetAltura: Double;
+
+    //setters:
+    procedure SetPeso(const Value: Double);
+    procedure SetAltura(const Value: Double);
+
+    property tPeso: Double read GetPeso write SetPeso;
+    property tAltura: Double read GetAltura write SetAltura;
+
+    function CalcularIMC(Altura, Peso: Double): Double;
+    function ClassificaIMC(IMC: Double; Sexo: Integer): string;
+  end;
+
+implementation
+
+
+end.

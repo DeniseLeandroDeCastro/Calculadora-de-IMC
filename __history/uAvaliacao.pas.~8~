@@ -1,0 +1,47 @@
+unit uAvaliacao;
+
+interface
+
+type
+  TAvaliacao = class(TObject)
+    private
+    { private declarations }
+
+    FIdade: Integer;
+    FPeso: Double;
+    FAltura: Double;
+
+    //getters
+    function GetIdade: Integer;
+    function GetPeso: Double;
+    function GetAltura: Double;
+
+    //setters
+    procedure SetIdade(const Value: Integer);
+    procedure SetPeso(const Value: Double);
+    procedure SetAltura(const Value: Double);
+    protected
+     { protected declarations }
+    public
+     { public declarations }
+    // encapsulamento
+     property Idade: Integer read GetIdade write SetIdade;
+     property Peso: Double read GetPeso write SetPeso;
+     property Altura: Double read GetAltura write SetAltura;
+     // metodos
+     function CalculaIMC(pAltura, pPeso: Double):Double;
+     function ClassificacaoIMC(pIMC: Double; pIdade: integer): string;
+     function RetornaClassificacaoIMC(pIMC: Double; pIdade: Integer): string;
+   published
+    { published declarations }
+  end;
+
+implementation
+
+//Método utilizado para o teste do caminho básico
+function TAvaliacao.RetornaClassificacaoIMC(pIMC: Double; pIdade: Integer): string;
+begin
+
+end;
+
+end.

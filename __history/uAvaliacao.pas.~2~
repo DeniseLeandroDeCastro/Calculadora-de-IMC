@@ -1,0 +1,13 @@
+unit uAvaliacao;
+
+interface
+
+Type
+  TAvaliacao = class(TObject)
+    private
+
+  end;
+implementation
+
+
+end.

@@ -1,0 +1,45 @@
+object FrmPrincipal: TFrmPrincipal
+  Left = 439
+  Top = 309
+  Caption = 'C'#225'lculo de '#205'ndice Corporal'
+  ClientHeight = 231
+  ClientWidth = 505
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesigned
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Button1: TButton
+    Left = 73
+    Top = 168
+    Width = 121
+    Height = 25
+    Caption = 'Resultado'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 200
+    Top = 168
+    Width = 121
+    Height = 25
+    Caption = 'Ver Requisitos'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 1
+  end
+end
